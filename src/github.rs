@@ -102,7 +102,7 @@ impl GithubClient {
             }
             (None, None, None) => {
                 if let Some((auth, expired)) = fetch_cached_github_auth() {
-                    builder.oauth(auth)
+                    builder.oauth(self.oauth(&auth, expired).await?)
                 } else {
                     return Err(GithubClientError::MissingGithubToken);
                 }
