@@ -15,7 +15,7 @@ use thiserror::Error;
 
 use crate::targets::PullRequest;
 
-const KEYRING_SERVICE: &str = "sentinal-cli";
+const KEYRING_SERVICE: &str = "sentinel-cli";
 const KEYRING_ACCOUNT: &str = "oauth";
 
 // scopes needed to review PR details, and repo context
