@@ -1,6 +1,5 @@
 use std::sync::Arc;
 
-use http::Uri;
 use keyring::Entry;
 use kunobi_jev::reqwest::header::ACCEPT;
 use octocrab::{
