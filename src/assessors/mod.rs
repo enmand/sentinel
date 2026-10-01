@@ -194,7 +194,13 @@ impl<'a> From<Assessment<'a>> for Value {
                     }
                     Verdict::Unknown(value) => value,
                 };
-                (key, value)
+                (
+                    key,
+                    Value::Object(BTreeMap::from_iter([
+                        ("statement".to_string(), statement.into()),
+                        ("verdict".to_string(), value),
+                    ])),
+                )
             })
             .collect();
         Value::Object(verdicts)
