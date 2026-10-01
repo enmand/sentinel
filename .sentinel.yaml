@@ -1,0 +1,14 @@
+version: 1
+
+questions:
+  something: this is a question?
+
+data:
+  some: bits
+  of:
+    structred: data
+
+thresholds:
+  api-review: 2
+
+policy: .sentinel/policy.rego
